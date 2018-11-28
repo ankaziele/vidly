@@ -12,9 +12,15 @@ class Movies extends Component {
      this.setState({movies})
   }
 
+
+
   render() {
+      if (this.state.movies.length === 0) return <h2>There are no movies</h2>
     return (
-      <table className="table">
+        <div>
+
+        <h2>Number of movies in databes: {this.state.movies.length}</h2>
+      <table className="table" >
         <thead>
           <tr>
             <th>Title</th>
@@ -46,6 +52,7 @@ class Movies extends Component {
           )}
         </tbody>
       </table>
+        </div>
     );
   }
 }
