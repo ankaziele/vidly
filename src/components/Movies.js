@@ -15,6 +15,8 @@ class Movies extends Component {
 
 
   render() {
+
+    
       if (this.state.movies.length === 0) return <h2>There are no movies</h2>
     return (
         <div>
